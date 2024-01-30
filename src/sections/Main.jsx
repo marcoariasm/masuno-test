@@ -1,33 +1,37 @@
 import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
+import Image from "react-bootstrap/esm/Image";
 import Row from "react-bootstrap/esm/Row";
+//components
 import Ruler from "../components/Ruler";
 import Step from "../components/Step";
 import ImageLogo from "../components/ImageLogo";
 import Slider from "../components/Slider";
-import Image from "react-bootstrap/esm/Image";
+//styles
 import logoDark from "../shared/images/Group 25 (1).png";
 import step1 from "../shared/images/Group 173.png";
 import step2 from "../shared/images/Group 174.png";
 import step3 from "../shared/images/Group 175.png";
 import underlined from "../shared/images/Subrayado Rojo.png";
+// content
+import text from "../content/text";
+
+const { main, step1Content, step2Content, step3Content } = text;
 
 const Main = () => {
   return (
-    <Container style={{ border: "1px red solid" }}>
+    <Container>
+      {/* steps */}
       <Row>
-        {/* steps */}
         <Col className="text-center">
           <Ruler />
-          <p className="main__header">
-            ¿Cómo obtengo el descuento por Cyber Days?
-          </p>
+          <p className="main__title">{main.title}</p>
           <Image src={underlined} />
           <p className="main__text">
-            Para adquirir nuestro descuento especial por&nbsp;
-            <span className="main__text--red">Cyber Days</span>&nbsp; sigue los
-            siguientes pasos
+            {main.text1}&nbsp;
+            <span className="main__text--red">{main.text2}</span>&nbsp;
+            {main.text3}
           </p>
           <br />
         </Col>
@@ -35,37 +39,35 @@ const Main = () => {
       <Row>
         <Col className="d-flex">
           <Step
-            title={"Paso 1"}
-            subtitle={"Regístrate"}
-            text="Completa el formulario con tus datos personales y acepta los términos."
+            title={step1Content.title}
+            subtitle={step1Content.subtitle}
+            text={step1Content.text}
             image={step1}
           />
           <Step
-            title={"Paso 2"}
-            subtitle={"Recibe un cupón"}
-            text="Recibirás un correo electrónico donde podrás ver el cupón de descuento."
+            title={step2Content.title}
+            subtitle={step2Content.subtitle}
+            text={step2Content.text}
             image={step2}
           />
           <Step
-            title={"Paso 3"}
-            subtitle={"Empieza a ahorrar"}
-            text="¡Y listo! Podrás usarlo del 28 al 30 de Marzo por compras en nuestra tienda online."
+            title={step3Content.title}
+            subtitle={step3Content.subtitle}
+            text={step3Content.text}
             image={step3}
           />
         </Col>
         <Ruler />
+
+        {/* technologies */}
         <Row>
-          {/* technologies */}
-          <Col
-            className="d-flex justify-content-center align-items-center"
-            style={{ border: "1px red solid" }}
-          >
+          <Col className="d-flex justify-content-center align-items-center">
             <ImageLogo src={logoDark} />
           </Col>
         </Row>
         <Row>
           <Col className="text-center my-5">
-            <p className="main__header">Las mejores tecnologías de Más Uno</p>
+            <p className="main__title">{main.technologies}</p>
             <Image src={underlined} />
           </Col>
         </Row>

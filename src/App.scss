@@ -1,4 +1,13 @@
 .portrait {
+  position: relative;
+
+  &__background {
+    background-color: var(--blue-main);
+  }
+
+  &__top {
+    height: 117px;
+  }
 
   &__info {
     color: var(--white);
@@ -29,7 +38,6 @@
 
   &__line {
     width: 247px;
-    display: inline;
   }
   
   &__dates {
@@ -37,10 +45,27 @@
     font-size: 1.75rem;
   }
 
+  &__seal {
+    position: absolute;
+    z-index: 2;
+    right: -1.5rem;
+    top: -3rem;
+  }
+
 }
 
 // ver si esta bien aqui
 .coupon {
+
+  &__card {
+    border-radius: 0;
+  }
+
+  &__frame {
+    border: 1px dashed var(--blue-sf);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+  }
 
   &__title {
     color: var(--cyan);
@@ -51,8 +76,11 @@
   &__info1 {
     color: var(--blue-main);
     font-size: 1.5rem;
-    max-width: 50px;
-    display: inline;
+    vertical-align: top;
+
+    &--cyan {
+      color: var(--cyan);
+    }
   }
   
   &__info2 {
@@ -70,6 +98,12 @@
 
 .form {
 
+  color: var(--gray-sf);
+
+  &__card {
+    border-radius: 2rem;
+  }
+
   &__title {
     color: var(--red-new);
     font-weight: 800;
@@ -80,13 +114,20 @@
 
     &--red {
       color: var(--red-new);
+      font-weight: 900;
     }
+  }
+
+  &__links {
+    all: unset;
+    color: var(--blue-main);
+    
   }
 }
 
 .main {
   
-  &__header {
+  &__title {
     color: var(--blue-main);
     font-size: 2rem;
     font-weight: 700;
@@ -132,7 +173,6 @@
     top: 0;
     left: 0;
     transform: translate(0, 0); 
-    border: 2px solid orange;
     text-align: left;
     max-width: 40rem;
     padding: 2rem;
@@ -156,6 +196,10 @@
 }
 
 .footer {
+
+  &__background {
+    background-color: var(--blue-main);
+  }
   
   &__title {
     color: var(--white);
@@ -184,9 +228,40 @@
 
 }
 
-.btn-masuno {
+.ruler {
+  &__line {
+    background-color: var(--blue-main);
+    height: 2px;
+    width: 550px;
+    opacity: 1;
+    margin-left: 10;
+    margin-right: 10;
+  }
+}
+
+.btn-info {
   background-color: var(--blue-main);
+  color: var(--white);
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.btn-form {
+  background-color: var(--gray-disabled);
+  color: var(--white);
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+}
+
+.form-control::placeholder {
+  color: var(--gray-sf);
+  opacity: 1;
+}
+
+.fix-select {
+  max-height: 2.5rem;
 }

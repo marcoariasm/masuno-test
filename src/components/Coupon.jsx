@@ -1,42 +1,34 @@
 import React from "react";
 import Card from "react-bootstrap/esm/Card";
 import Image from "react-bootstrap/esm/Image";
-import Discount10 from "../shared/images/discount10.png";
+//components
+import Discount10 from "../shared/images/Group 899.png";
 import underlined2 from "../shared/images/Subrayado Azul.png";
+// content
+import text from "../content/text";
 
-const CouponSection = () => {
+const { coupon } = text;
+
+const Coupon = () => {
   return (
-    <Card
-      style={{
-        borderRadius: 0,
-      }}
-    >
+    <Card className="coupon__card">
       <Card.Body>
-        <div
-          style={{
-            border: "1px dashed var(--blue-sf)",
-            borderRadius: 8,
-            padding: "20px",
-          }}
-        >
+        <div className="coupon__frame">
           <Card.Title className="text-center">
-            <p className="coupon__title">Regístrate y obtén</p>
+            <p className="coupon__title">{coupon.title}</p>
             <Image src={underlined2} />
           </Card.Title>
-          <Card.Text>
-            <div className="text-center">
-              <Image src={Discount10} />
-              <span className="coupon__info1">En tu primera compra de</span>
-              <span className="coupon__info2">CYBER DAYS</span>
+          <Card.Text className="text-center">
+            <Image src={Discount10} />
+            <p className="coupon__text m-3">
+              {coupon.text1}
               <br />
               <br />
-              <p className="coupon__text">
-                Aplicamos el descuento mediante un código que se te eviará a tu
-                correo registrado. <br />
-                Cupón válido del 28 al 30 de marzo. <br />
-                *Aplican términos y condiciones
-              </p>
-            </div>
+              {coupon.text2}
+              <br />
+              <br />
+              {coupon.text3}
+            </p>
           </Card.Text>
         </div>
       </Card.Body>
@@ -44,4 +36,4 @@ const CouponSection = () => {
   );
 };
 
-export default CouponSection;
+export default Coupon;
