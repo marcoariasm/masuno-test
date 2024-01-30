@@ -17,7 +17,7 @@ import underlined from "../shared/images/Subrayado Rojo.png";
 // content
 import text from "../content/text";
 
-const { main, step1Content, step2Content, step3Content } = text;
+const { main, step1Content, step2Content, step3Content, technologies } = text;
 
 const Main = () => {
   return (
@@ -67,7 +67,7 @@ const Main = () => {
         </Row>
         <Row>
           <Col className="text-center my-5">
-            <p className="main__title">{main.technologies}</p>
+            <p className="main__title">{technologies.title}</p>
             <Image src={underlined} />
           </Col>
         </Row>
