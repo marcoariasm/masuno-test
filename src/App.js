@@ -1,13 +1,11 @@
-import Portrait from "./components/Portrait";
-import Logo from "./components/Logo";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Portrait from "./sections/Portrait";
+import Main from "./sections/Main";
+import Footer from "./sections/Footer";
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <Logo />
       <Portrait />
       <Main />
       <Footer />

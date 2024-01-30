@@ -7,7 +7,7 @@ import icons from "../shared/images/Group 701.png";
 
 const Ruler = () => {
   return (
-    <Container className="my-5">
+    <Container className="my-5" style={{ border: "1px red solid" }}>
       <Row>
         <Col className="d-flex justify-content-space-between">
           <hr
@@ -15,19 +15,19 @@ const Ruler = () => {
               // color: "#1A36A8",
               backgroundColor: "#1A36A8",
               height: "2px",
-              width: "40%",
+              width: "550px",
               opacity: 1,
               marginLeft: 10,
               marginRight: 10,
             }}
           ></hr>
-          <Image src={icons} />
+          <Image src={icons} className="px-3" />
           <hr
             style={{
               // color: "#1A36A8",
               backgroundColor: "#1A36A8",
               height: "2px",
-              width: "40%",
+              width: "537px",
               opacity: 1,
               marginLeft: 10,
               marginRight: 10,

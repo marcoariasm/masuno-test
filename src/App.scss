@@ -2,28 +2,39 @@
 
   &__info {
     color: var(--white);
+    font-size: 1.5rem;
     text-transform: uppercase;
     display: inline;
   }
   
   &__title {
     color: var(--white);
+    font-size: 3.5rem;
     text-transform: uppercase;
+    font-weight: 600;
   }
   
   &__subtitle {
     color: var(--white);
+    font-size: 2.5rem;
     text-transform: uppercase;
     display: inline
   }
   
   &__underlined {
     color: var(--white);
+    font-size: 3.5rem;
     display: inline
+  }
+
+  &__line {
+    width: 247px;
+    display: inline;
   }
   
   &__dates {
     color: var(--white);
+    font-size: 1.75rem;
   }
 
 }
@@ -40,12 +51,15 @@
   &__info1 {
     color: var(--blue-main);
     font-size: 1.5rem;
+    max-width: 50px;
+    display: inline;
   }
   
   &__info2 {
     color: var(--cyan);
     font-size: 1.5rem;
     font-weight: 800;
+    display: inline;
   }
 
   &__text {
@@ -54,14 +68,34 @@
   }
 }
 
-.main {
-  
-  &__header {
-    font-size: 32px;
+.form {
+
+  &__title {
+    color: var(--red-new);
+    font-weight: 800;
   }
 
   &__text {
     color: var(--gray-text);
+
+    &--red {
+      color: var(--red-new);
+    }
+  }
+}
+
+.main {
+  
+  &__header {
+    color: var(--blue-main);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  &__text {
+    color: var(--gray-text);
+    font-size: 1.5rem;
+    font-weight: 700;
 
     &--red {
       color: var(--red-new);
@@ -74,14 +108,50 @@
 
   &__title {
     color: var(--blue-main);
+    font-size: 2rem;
+    font-weight: 800;
   }
   
   &__subtitle {
     color: var(--blue-main);
+    font-size: 2rem;
+    font-weight: 800;
   }
 
   &__text {
     color: var(--gray-text);
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+}
+
+.slider {
+
+  &__caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0); 
+    border: 2px solid orange;
+    text-align: left;
+    max-width: 40rem;
+    padding: 2rem;
+    padding-top: 6rem;
+  }
+
+  &__title {
+    color: var(--red-new);
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 2rem;
+  }
+
+  &__text {
+    color: var(--black-text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 2rem;
+    padding-right: 3rem;
   }
 }
 
@@ -97,7 +167,26 @@
   &__text {
     color: var(--white);
     font-size: 1rem;
-    font-weight: 300;  // crear variable si se repite
-    line-height: 1.375rem;
+    font-weight: 600;  // crear variable si se repite
+    line-height: 2.2rem;
   }
+
+  &__copyright {
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 2.2rem;
+    font-weight: 200;
+  }
+  
+  &__social {
+    padding-right: 1.5rem;
+  } 
+
+}
+
+.btn-masuno {
+  background-color: var(--blue-main);
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
 }

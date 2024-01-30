@@ -2,13 +2,15 @@ import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
-import Ruler from "./Ruler";
-import Step from "./Step";
-import ImageLogo from "./ImageLogo";
-import InfoSlider from "./InfoSlider";
+import Ruler from "../components/Ruler";
+import Step from "../components/Step";
+import ImageLogo from "../components/ImageLogo";
+import Slider from "../components/Slider";
 import Image from "react-bootstrap/esm/Image";
 import logoDark from "../shared/images/Group 25 (1).png";
 import step1 from "../shared/images/Group 173.png";
+import step2 from "../shared/images/Group 174.png";
+import step3 from "../shared/images/Group 175.png";
 import underlined from "../shared/images/Subrayado Rojo.png";
 
 const Main = () => {
@@ -23,9 +25,9 @@ const Main = () => {
           </p>
           <Image src={underlined} />
           <p className="main__text">
-            Para adquirir nuestro descuento especial por{" "}
-            <span className="main__text--red">Cyber Days</span>
-            sigue los siguientes pasos
+            Para adquirir nuestro descuento especial por&nbsp;
+            <span className="main__text--red">Cyber Days</span>&nbsp; sigue los
+            siguientes pasos
           </p>
           <br />
         </Col>
@@ -35,20 +37,20 @@ const Main = () => {
           <Step
             title={"Paso 1"}
             subtitle={"Regístrate"}
-            text={"Completa el formulario..."}
+            text="Completa el formulario con tus datos personales y acepta los términos."
             image={step1}
           />
           <Step
-            title={"Paso 1"}
-            subtitle={"Regístrate"}
-            text={"Completa el formulario..."}
-            image={step1}
+            title={"Paso 2"}
+            subtitle={"Recibe un cupón"}
+            text="Recibirás un correo electrónico donde podrás ver el cupón de descuento."
+            image={step2}
           />
           <Step
-            title={"Paso 1"}
-            subtitle={"Regístrate"}
-            text={"Completa el formulario..."}
-            image={step1}
+            title={"Paso 3"}
+            subtitle={"Empieza a ahorrar"}
+            text="¡Y listo! Podrás usarlo del 28 al 30 de Marzo por compras en nuestra tienda online."
+            image={step3}
           />
         </Col>
         <Ruler />
@@ -69,7 +71,7 @@ const Main = () => {
         </Row>
         <Row>
           <Col>
-            <InfoSlider />
+            <Slider />
           </Col>
         </Row>
       </Row>

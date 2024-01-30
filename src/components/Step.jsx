@@ -9,10 +9,10 @@ const Step = ({ title, subtitle, text, image }) => {
     <Container>
       <Row>
         <Col className="text-center">
-          <h2 className="step__title">{title}</h2>
-          <Image src={image} />
-          <h3 className="step__subtitle">{subtitle}</h3>
-          <p className="step__text">{text}</p>
+          <h2 className="step__title my-3">{title}</h2>
+          <Image src={image} className="p-4" />
+          <h3 className="step__subtitle my-3">{subtitle}</h3>
+          <p className="step__text my-2">{text}</p>
         </Col>
       </Row>
     </Container>

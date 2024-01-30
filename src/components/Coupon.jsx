@@ -2,14 +2,13 @@ import React from "react";
 import Card from "react-bootstrap/esm/Card";
 import Image from "react-bootstrap/esm/Image";
 import Discount10 from "../shared/images/discount10.png";
-import underlinedBlue from "../shared/images/Subrayado Azul.png";
+import underlined2 from "../shared/images/Subrayado Azul.png";
 
 const CouponSection = () => {
   return (
     <Card
       style={{
         borderRadius: 0,
-        margin: "20px",
       }}
     >
       <Card.Body>
@@ -22,11 +21,11 @@ const CouponSection = () => {
         >
           <Card.Title className="text-center">
             <p className="coupon__title">Regístrate y obtén</p>
-            <Image src={underlinedBlue} />
+            <Image src={underlined2} />
           </Card.Title>
           <Card.Text>
-            <Image src={Discount10} />
             <div className="text-center">
+              <Image src={Discount10} />
               <span className="coupon__info1">En tu primera compra de</span>
               <span className="coupon__info2">CYBER DAYS</span>
               <br />
