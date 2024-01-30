@@ -1,0 +1,103 @@
+.portrait {
+
+  &__info {
+    color: var(--white);
+    text-transform: uppercase;
+    display: inline;
+  }
+  
+  &__title {
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  
+  &__subtitle {
+    color: var(--white);
+    text-transform: uppercase;
+    display: inline
+  }
+  
+  &__underlined {
+    color: var(--white);
+    display: inline
+  }
+  
+  &__dates {
+    color: var(--white);
+  }
+
+}
+
+// ver si esta bien aqui
+.coupon {
+
+  &__title {
+    color: var(--cyan);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__info1 {
+    color: var(--blue-main);
+    font-size: 1.5rem;
+  }
+  
+  &__info2 {
+    color: var(--cyan);
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  &__text {
+    color: var(--blue-sf);
+    font-size: 1rem;
+  }
+}
+
+.main {
+  
+  &__header {
+    font-size: 32px;
+  }
+
+  &__text {
+    color: var(--gray-text);
+
+    &--red {
+      color: var(--red-new);
+    }
+  }
+  
+}
+
+.step {
+
+  &__title {
+    color: var(--blue-main);
+  }
+  
+  &__subtitle {
+    color: var(--blue-main);
+  }
+
+  &__text {
+    color: var(--gray-text);
+  }
+}
+
+.footer {
+  
+  &__title {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 700;  // crear variable si se repite
+    line-height: 1.75rem;
+  }
+  
+  &__text {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 300;  // crear variable si se repite
+    line-height: 1.375rem;
+  }
+}
